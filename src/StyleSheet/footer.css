@@ -1,0 +1,21 @@
+/*------------------ Footer Section----------------*/
+#footer {
+    background-color: #343a40 !important;
+    color: #ffffff;
+    text-align: center;
+}
+#footer i {
+    color: #ffffff;
+}
+#footer a {
+    color: #ffffff;
+}
+#footer a:hover span {
+    text-decoration: underline;
+}
+#footer [class*="col-md-"] {
+    padding-top: 3px;
+    padding-left: 30px;
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+}

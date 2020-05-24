@@ -1,0 +1,100 @@
+/*------------------ Footer Section----------------*/
+#dataTable #nav-bar {
+  background-image: none !important;
+  background-color: #343a40 !important;
+}
+/*------------------ Data Table Section----------------*/
+.MuiPaper-root {
+  width: 95%;
+  margin: 20px auto;
+}
+
+.MuiPaper-root th,
+.MuiPaper-root [class*=" MUIDataTableBodyCell-cellHide-"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.MuiPaper-root td {
+  font-family: "Roboto Thin", sans-serif;
+  font-size: 0.9em;
+}
+
+.MUIDataTableToolbar-titleRoot-18 h6 {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+.MuiPaper-elevation8 {
+  width: 5%;
+}
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.root div {
+  text-align: center;
+  margin: 12px;
+  padding: 20px 65px;
+}
+.root div .numbers {
+  font-family: Montserrat,sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+.root div .labels {
+  font-size: 17px;
+}
+
+#infectedNumbers {
+  color: #d9521d;
+}
+#deathsNumbers {
+  color: #dd1212;
+}
+#recoveredNumbers {
+  color: #0d8617;
+}
+
+#continentsPane {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 40px;
+}
+#continentsPane button {
+
+  outline: none !important;
+  font-family: Montserrat, sans-serif;
+  margin: 5px;
+  cursor: pointer;
+}
+#continentsPane a {
+  color: black;
+}
+#continentsPane .activeContinent {
+  color: #2a3992;
+}
+#continentsPane .activeContinent img {
+  filter: invert(19%) sepia(88%) saturate(1525%) hue-rotate(217deg);
+}
+#continentsPane button {
+  background-color: #ffffff;
+  border-style: none;
+}
+#continentsPane button {
+  width: 40px;
+}
+#myFlexComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#myFlexComponent .menu {
+  width: 16.5%;
+}
+#myFlexComponent #myTabs .MuiPaper-root {
+  margin-top: 30px;
+  width: 93vw;
+}

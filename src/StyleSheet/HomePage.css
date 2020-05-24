@@ -1,0 +1,128 @@
+/*------------------Main----------------*/
+#main .divider {
+  width: 700px;
+  margin: 0 auto 30px;
+}
+
+/*------------------Banner Section----------------*/
+#banner {
+  background-image: linear-gradient(
+    30deg,
+    rgb(101, 131, 215) 0%,
+    rgb(35, 79, 164) 34%,
+    rgba(42, 183, 175, 0.86) 80%
+  ) !important;
+  padding: 7% !important;
+  color: #ffffff;
+}
+#banner .homePageTitle {
+  font-size: 38px;
+  font-weight: 600;
+  margin-top: 100px;
+}
+#banner .homePageButton {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid white;
+  padding: 8px 20px !important;
+}
+#banner .homePageButton svg {
+  font-size: 25px;
+  margin-left: 10px;
+}
+#banner .homePageText {
+  margin-bottom: 40px;
+  text-align: justify;
+}
+#banner #google_analytics {
+  margin-top: 40px;
+}
+/*------------------ Features Section----------------*/
+#features {
+  margin-top: 30px;
+  text-align: center;
+}
+#features h1 {
+  margin-bottom: 80px;
+}
+#features .homePageText {
+  margin-top: 30px;
+  text-align: justify;
+  margin-bottom: 60px;
+}
+#features .featuresImage {
+  width: 250px;
+}
+#features #featuresSecondImage {
+  margin-top: -43px;
+  width: 250px;
+}
+#features #featuresThirdImage {
+  margin-top: -6px;
+}
+/*------------------ Api Section----------------*/
+#api {
+  text-align: center;
+}
+#api h2 {
+  margin-top: 40px;
+}
+#api p {
+  margin-top: 40px;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+}
+#api #apiDocumentationButton {
+  font-size: 15px;
+  color: white;
+  background-color: #23509b;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 14px 15px !important;
+}
+#api .container {
+  margin-bottom: 40px;
+}
+/*------------------ Support Section----------------*/
+#support {
+  text-align: center;
+}
+#support p {
+  margin-top: 40px;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+}
+#support a p {
+  color: #23509b;
+  text-decoration: underline;
+}
+#support #githubIcon {
+  margin-top: 25px;
+  color: #23509b;
+}
+#support .container {
+  margin-bottom: 40px;
+}
+/*------------------ Footer Section----------------*/
+#footer {
+  background-color: #343a40 !important;
+  color: #ffffff;
+  text-align: center;
+}
+#footer i {
+  color: #ffffff;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer a:hover span {
+  text-decoration: underline;
+}
+#footer [class*="col-md-"] {
+  padding-top: 3px;
+  padding-left: 30px;
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+}

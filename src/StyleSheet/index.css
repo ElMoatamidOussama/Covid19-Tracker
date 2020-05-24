@@ -1,0 +1,16 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Roboto", sans-serif;
+}
+#root {
+  font-family: "Roboto", sans-serif;
+}
