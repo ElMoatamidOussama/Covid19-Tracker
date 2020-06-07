@@ -8,19 +8,16 @@
   width: 95%;
   margin: 20px auto;
 }
-
 .MuiPaper-root th,
 .MuiPaper-root [class*=" MUIDataTableBodyCell-cellHide-"] {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: bold;
 }
-
 .MuiPaper-root td {
   font-family: "Roboto Thin", sans-serif;
   font-size: 0.9em;
 }
-
 .MUIDataTableToolbar-titleRoot-18 h6 {
   font-size: 1.5em;
   font-family: "Roboto", sans-serif;
@@ -39,15 +36,18 @@
   padding: 20px 65px;
 }
 .root div .numbers {
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 25px;
   font-weight: bold;
 }
-.root div .labels {
-  font-size: 17px;
+.root div .numbers span{
+  font-size: 25px;
 }
-
-#infectedNumbers {
+.root div .labels {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+}
+#confirmedNumbers {
   color: #d9521d;
 }
 #deathsNumbers {
@@ -56,7 +56,6 @@
 #recoveredNumbers {
   color: #0d8617;
 }
-
 #continentsPane {
   text-align: center;
   display: flex;
@@ -64,7 +63,6 @@
   margin-right: 40px;
 }
 #continentsPane button {
-
   outline: none !important;
   font-family: Montserrat, sans-serif;
   margin: 5px;
@@ -92,9 +90,18 @@
   justify-content: space-evenly;
 }
 #myFlexComponent .menu {
-  width: 16.5%;
+  width: 27.5%;
 }
 #myFlexComponent #myTabs .MuiPaper-root {
   margin-top: 30px;
   width: 93vw;
+}
+.MuiPaper-root [class*="MUIDataTableToolbar-actions-"] button{
+  outline: none !important;
+}
+.MuiPaper-root #pagination-next {
+  outline: none !important;
+}
+.MuiPaper-root #pagination-back {
+  outline: none !important;
 }

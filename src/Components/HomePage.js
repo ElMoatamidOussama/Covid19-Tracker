@@ -52,7 +52,7 @@ class HomePage extends React.Component {
                     onClick={this.onClick}
                   >
                     Get Started
-                    <PlayCircleOutlineIcon fontSize={"medium"} />
+                    <PlayCircleOutlineIcon fontSize={"large"} />
                   </Button>
                 </Col>
                 <Col md={1} />
@@ -74,12 +74,7 @@ class HomePage extends React.Component {
               <h1> Features </h1>
               <Row className={"justify-content-md-center"}>
                 <Col md={3}>
-                  <Image
-                    src={src1}
-                    className={"featuresImage"}
-                    wrapped
-                    ui={false}
-                  />
+                  <Image src={src1} className={"featuresImage"} />
                   <h3> Tabular View</h3>
                   <p className={"homePageText"}>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -93,8 +88,6 @@ class HomePage extends React.Component {
                     src={src2}
                     className={"featuresImage"}
                     id={"featuresSecondImage"}
-                    wrapped
-                    ui={false}
                   />
                   <h3> Chart View</h3>
                   <p className={"homePageText"}>
@@ -109,8 +102,6 @@ class HomePage extends React.Component {
                     src={src3}
                     className={"featuresImage"}
                     id={"featuresThirdImage"}
-                    wrapped
-                    ui={false}
                   />
                   <h3> Map View</h3>
 

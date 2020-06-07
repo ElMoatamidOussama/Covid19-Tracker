@@ -1,102 +1,154 @@
 import React from "react";
+import { Tab } from "semantic-ui-react";
 import Navbar from "../Shared/Navbar";
-import "../../StyleSheet/tableView.css";
-import { Paper } from "@material-ui/core/";
-import { TabPane } from "semantic-ui-react";
-import { Image, Tab } from "semantic-ui-react";
-import MyTable from "../../Data/MyTable";
 import Footer from "../Shared/Footer";
-import Section from "react-virtualized/dist/commonjs/Collection/Section";
+import DataTable from "./DataTable";
+import RenderContinentsButtons from "./ContinentButtons";
+import MainCategoriesData from "../Dashboard/MainCategoriesData";
+import "../../StyleSheet/tableView.css";
+import populationByCountry from "../../Data/populationByCountry";
+import countriesByContinent from "../../Data/countriesByContinent";
+class TableView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.populationByCountryData = populationByCountry;
+    this.countriesByContinent = countriesByContinent;
+    this.state = {
+      isLoaded: false,
+      globalData: {
+        total: "",
+        newConfirmed: "",
+        confirmed: "",
+        deaths: "",
+        newDeaths: "",
+        recovered: "",
+        newRecovered: "",
+      },
+      data: [],
+      lastUpdateDate: "",
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-const TableView = () => {
-  const panes = [
-    {
-      menuItem: "Tabular",
-      render: () => <MyTable />,
-    },
-    {
-      menuItem: "Chart",
-      render: () => <TabPane attached={true}>Tab 1 Content</TabPane>,
-    },
-    {
-      menuItem: "Map",
-      render: () => <TabPane attached={true}>Tab 1 Content</TabPane>,
-    },
-  ];
-  const handleClick = (event) => {
+  componentDidMount() {
+    console.log(
+      "Your Element",
+      document.querySelector("div[class*=MUIDataTableToolbar-filterPaper-]")
+    );
+    fetch("https://api.covid19api.com/summary")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          if (result.Global) {
+            const total =
+              result.Global.TotalRecovered +
+              result.Global.TotalDeaths +
+              result.Global.TotalConfirmed;
+
+            const globalData = {
+              total: total,
+              confirmed: result.Global.TotalConfirmed,
+              newConfirmed: result.Global.NewConfirmed,
+              deaths: result.Global.TotalDeaths,
+              newDeaths: result.Global.NewDeaths,
+              recovered: result.Global.TotalRecovered,
+              newRecovered: result.Global.NewRecovered,
+            };
+            if (result.Countries) {
+              this.setState({
+                isLoaded: true,
+                lastUpdateDate: new Date(result.Date).toUTCString("en-US"),
+                globalData: { ...globalData },
+                data: result.Countries.map((item) => {
+                  item.TotalCases =
+                    item.TotalConfirmed +
+                    item.TotalDeaths +
+                    item.TotalRecovered;
+
+                  let populationElement = this.populationByCountryData.find(
+                    (element) => element.country === item.Country
+                  );
+
+                  item.Population = populationElement
+                    ? populationElement.population
+                    : 0;
+
+                  let continentElement = this.countriesByContinent.find(
+                    (element) => element.country === item.Country
+                  );
+                  item.Continent = continentElement
+                    ? continentElement.continent
+                    : "";
+
+                  return item;
+                }),
+              });
+            }
+          }
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error,
+          });
+        }
+      );
+  }
+
+  handleClick = (event) => {
     const activeElement = document.querySelector(
       "#continentsPane .activeContinent"
     );
-    if (activeElement) activeElement.classList.remove("activeContinent");
-    event.currentTarget.classList.add("activeContinent");
+    const currentElement = event.currentTarget;
+    if (activeElement && activeElement !== currentElement) {
+      activeElement.classList.remove("activeContinent");
+      currentElement.classList.add("activeContinent");
+    }
   };
-  const continentsList = [
-    { fullName: "All", shortName: "All" },
-    { fullName: "Africa", shortName: "AF" },
-    { fullName: "NorthAmerica", shortName: "NA" },
-    { fullName: "SouthAmerica", shortName: "SA" },
-    { fullName: "Asia", shortName: "AS" },
-    { fullName: "Oceania", shortName: "OC" },
-    { fullName: "Europe", shortName: "EU" },
-  ];
-  const RenderContinentsButtons = () => (
-    <div id="continentsPane">
-      {continentsList.map((item, index) => (
-        <button
-          key={index}
-          className={index === 0 ? "activeContinent" : ""}
-          onClick={handleClick}
-        >
-          <Image
-            src={"../images/Continents/" + item.fullName + ".svg"}
-            size="mini"
-          />
-          {item.shortName}
-        </button>
-      ))}
-    </div>
-  );
 
-  return (
-    <div id={"dataTable"}>
-      <Navbar />
-      <section>
-        <Paper elevation={3} className={"root"}>
-          <div>
-            <p className={"numbers"}>30,890,200</p>
-            <p className={"labels"}>Cases</p>
-          </div>
-          <div>
-            <p className={"numbers"} id={"infectedNumbers"}>
-              4,884,750
-            </p>
-            <p className={"labels"}>Infected</p>
-          </div>
-          <div>
-            <p className={"numbers"} id={"deathsNumbers"}>
-              319,765
-            </p>
-            <p className={"labels"}>Deaths</p>
-          </div>
-          <div>
-            <p className={"numbers"} id={"recoveredNumbers"}>
-              1,901,975
-            </p>
-            <p className={"labels"}>Recovered</p>
-          </div>
-        </Paper>
-      </section>
-      <section id={"myFlexComponent"}>
-        <RenderContinentsButtons />
-        <Tab
-          id={"myTabs"}
-          menu={{ secondary: true, pointing: true }}
-          panes={panes}
-        />
-      </section>
-      <Footer />
-    </div>
-  );
-};
+  render() {
+    const panes = [
+      {
+        menuItem: "Tabular",
+        render: () => (
+          <DataTable
+            data={this.state.data}
+            lastUpdateDate={this.state.lastUpdateDate}
+          />
+        ),
+      },
+      {
+        menuItem: "Linear Chart",
+        render: () => <div></div>,
+      },
+      {
+        menuItem: "Pie Chart",
+        render: () => <div></div>,
+      },
+      {
+        menuItem: "Map",
+        render: () => <div></div>,
+      },
+    ];
+
+    return (
+      <div id={"dataTable"}>
+        <Navbar />
+        <section id={"categoriesDataPane"}>
+          <MainCategoriesData {...this.state.globalData} />
+        </section>
+        <section id={"myFlexComponent"}>
+          {/* <RenderContinentsButtons handleClick={this.handleClick} /> */}
+          <Tab
+            id={"myTabs"}
+            menu={{ secondary: true, pointing: true }}
+            panes={panes}
+          />
+        </section>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default TableView;
