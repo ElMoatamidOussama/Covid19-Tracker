@@ -7,14 +7,6 @@ const DataTable = (props) => {
       name: "Country",
       label: "Country",
       options: {
-        filter: true,
-        sort: true,
-      },
-    },
-    {
-      name: "TotalCases",
-      label: "Total Cases",
-      options: {
         filter: false,
         sort: true,
       },
@@ -30,6 +22,14 @@ const DataTable = (props) => {
     {
       name: "NewConfirmed",
       label: "New Confirmed",
+      options: {
+        filter: false,
+        sort: true,
+      },
+    },
+    {
+      name: "TotalActive",
+      label: "Active",
       options: {
         filter: false,
         sort: true,

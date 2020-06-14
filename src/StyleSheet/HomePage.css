@@ -1,16 +1,16 @@
 /*------------------Main----------------*/
 #main .divider {
   width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 /*------------------Banner Section----------------*/
 #banner {
   background-image: linear-gradient(
-    30deg,
-    rgb(101, 131, 215) 0%,
-    rgb(35, 79, 164) 34%,
-    rgba(42, 183, 175, 0.86) 80%
+          30deg,
+          rgb(101, 131, 215) 0%,
+          rgb(35, 79, 164) 34%,
+          rgba(42, 183, 175, 0.86) 80%
   ) !important;
   padding: 7% !important;
   color: #ffffff;
@@ -45,7 +45,10 @@
   text-align: center;
 }
 #features h1 {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
+}
+#features img{
+  margin-bottom: 40px;
 }
 #features .homePageText {
   margin-top: 30px;
@@ -66,9 +69,6 @@
 #api {
   text-align: center;
 }
-#api h2 {
-  margin-top: 40px;
-}
 #api p {
   margin-top: 40px;
   font-size: 15px;
@@ -85,9 +85,16 @@
 #api .container {
   margin-bottom: 40px;
 }
+#api #documentationPostman {
+  margin: auto;
+  width: 50%;
+}
 /*------------------ Support Section----------------*/
 #support {
   text-align: center;
+}
+#support h1{
+  margin-bottom: 40px;
 }
 #support p {
   margin-top: 40px;
@@ -104,6 +111,10 @@
 }
 #support .container {
   margin-bottom: 40px;
+}
+#support #githubSupport {
+  margin: auto;
+  width: 50%;
 }
 /*------------------ Footer Section----------------*/
 #footer {

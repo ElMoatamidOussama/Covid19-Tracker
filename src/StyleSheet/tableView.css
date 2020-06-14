@@ -32,28 +32,28 @@
 }
 .root div {
   text-align: center;
-  margin: 12px;
-  padding: 20px 65px;
+  margin: 10px;
+  padding: 2px 65px;
 }
 .root div .numbers {
   font-family: Montserrat, sans-serif;
   font-size: 25px;
   font-weight: bold;
 }
-.root div .numbers span{
+.root div .numbers span {
   font-size: 25px;
 }
 .root div .labels {
   font-family: Montserrat, sans-serif;
   font-size: 20px;
 }
-#confirmedNumbers {
-  color: #d9521d;
+#Confirmed {
+  color: #2f4aa7;
 }
-#deathsNumbers {
+#Deaths {
   color: #dd1212;
 }
-#recoveredNumbers {
+#Recovered {
   color: #0d8617;
 }
 #continentsPane {
@@ -96,7 +96,7 @@
   margin-top: 30px;
   width: 93vw;
 }
-.MuiPaper-root [class*="MUIDataTableToolbar-actions-"] button{
+.MuiPaper-root [class*="MUIDataTableToolbar-actions-"] button {
   outline: none !important;
 }
 .MuiPaper-root #pagination-next {
@@ -104,4 +104,28 @@
 }
 .MuiPaper-root #pagination-back {
   outline: none !important;
+}
+/*------------------ Chart Section----------------*/
+#myTabs {
+  width: 94%;
+  margin: auto;
+}
+#mixedChart {
+  width: 600px;
+  margin: auto auto 20px;
+}
+@media screen and (max-width: 600px) {
+  #mixedChart {
+    width: 100%;
+  }
+}
+#countryForm{
+  width: 44%;
+  margin: 20px auto 25px;
+}
+#snackBar .MuiAlert-standardError{
+  width: 100% !important;
+}
+#snackBar .MuiIconButton-root{
+  outline: none!important;
 }

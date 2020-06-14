@@ -2,23 +2,26 @@ import Paper from "@material-ui/core/Paper";
 import React from "react";
 
 const MainCategoriesData = (props) => {
-  const jsonKeys = Object.keys(props);
   const mainCategoriesDataList = [
     {
-      categoryName: jsonKeys[0] + "\t Cases",
-      data: props.total,
-      newData: "",
+      categoryName: "Confirmed Cases",
+      data: props.TotalConfirmed,
+      newData: props.NewConfirmed,
     },
     {
-      categoryName: jsonKeys[1],
-      data: props.confirmed,
-      newData: props.newConfirmed,
+      categoryName: "Active",
+      data: props.TotalActive,
+      newData: props.NewActive,
     },
-    { categoryName: jsonKeys[3], data: props.deaths, newData: props.newDeaths },
     {
-      categoryName: jsonKeys[5],
-      data: props.recovered,
-      newData: props.newRecovered,
+      categoryName: "Deaths",
+      data: props.TotalDeaths,
+      newData: props.NewDeaths,
+    },
+    {
+      categoryName: "Recovered",
+      data: props.TotalRecovered,
+      newData: props.NewRecovered,
     },
   ];
 
@@ -26,7 +29,7 @@ const MainCategoriesData = (props) => {
     <Paper elevation={3} className={"root"}>
       {mainCategoriesDataList.map((item, index) => (
         <div key={item.categoryName}>
-          <p className={"numbers"} id={item.categoryName + "Numbers"}>
+          <p className={"numbers"} id={item.categoryName}>
             {item.data ? new Intl.NumberFormat().format(item.data) : item.data}
             <br />
             {index !== 0 && item.newData ? (

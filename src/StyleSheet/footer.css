@@ -1,21 +1,21 @@
 /*------------------ Footer Section----------------*/
 #footer {
-    background-color: #343a40 !important;
-    color: #ffffff;
-    text-align: center;
+  background-color: #343a40 !important;
+  color: #ffffff;
+  text-align: center;
 }
 #footer i {
-    color: #ffffff;
+  color: #ffffff;
 }
 #footer a {
-    color: #ffffff;
+  color: #ffffff;
 }
 #footer a:hover span {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 #footer [class*="col-md-"] {
-    padding-top: 3px;
-    padding-left: 30px;
-    font-size: 11px;
-    margin: 10px 0 10px 0;
+  padding-top: 3px;
+  padding-left: 30px;
+  font-size: 11px;
+  margin: 10px 0 10px 0;
 }

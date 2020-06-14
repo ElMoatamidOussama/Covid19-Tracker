@@ -28,6 +28,8 @@ class HomePage extends React.Component {
     const src1 = "../images/table_view.svg";
     const src3 = "../images/map_view.svg";
     const src2 = "../images/chart_view.svg";
+    const src4 = "../images/documentation.svg";
+    const src5 = "../images/github.svg";
 
     return (
       <div>
@@ -118,32 +120,47 @@ class HomePage extends React.Component {
           <section id={"api"}>
             <Container>
               <h1> API </h1>
-              <h2>Documentation Available on Postman</h2>
-              <p>
-                Documentation is available on Postman online where all routes
-                can be seen with relevant descriptions, requests and responses.
-              </p>
-              <Button
-                id={"apiDocumentationButton"}
-                size="large"
-                onClick={this.onClick}
-              >
-                Check Documentation <Icon name="chevron circle right" />
-              </Button>
+              <Row className={"justify-content-md-center"}>
+                <Col md={5}>
+                  <Image src={src4} className={"featuresImage"} fluid />
+                </Col>
+                <Col md={6} id={"documentationPostman"}>
+                  <h2>Documentation Available on Postman</h2>
+                  <p>
+                    Documentation is available on Postman online where all
+                    routes can be seen with relevant descriptions, requests and
+                    responses.
+                  </p>
+                  <Button
+                    id={"apiDocumentationButton"}
+                    size="large"
+                    onClick={this.onClick}
+                  >
+                    Check Documentation <Icon name="chevron circle right" />
+                  </Button>
+                </Col>
+              </Row>
             </Container>
           </section>
           <Divider />
           <section id={"support"}>
             <Container>
               <h1> Support The Project </h1>
-              <p>
-                You can support our project by adding stars on our github
-                repository via the link below.
-              </p>
-              <a href="https://github.com/ElMoatamidOussama/Covid19-Tracker">
-                <Icon size="huge" name="github" id={"githubIcon"} />
-                <p>github.com/ElMoatamidOussama/Covid19-Tracker</p>
-              </a>
+              <Row className={"justify-content-md-center"}>
+                <Col md={6} id={"githubSupport"}>
+                  <p>
+                    You can support our project by adding stars on our github
+                    repository via the link below.
+                  </p>
+                  <a href="https://github.com/ElMoatamidOussama/Covid19-Tracker">
+                    <Icon size="huge" name="github" id={"githubIcon"} />
+                    <p>github.com/ElMoatamidOussama/Covid19-Tracker</p>
+                  </a>
+                </Col>
+                <Col md={6}>
+                  <Image src={src5} className={"featuresImage"} fluid />
+                </Col>
+              </Row>
             </Container>
           </section>
           <Divider />

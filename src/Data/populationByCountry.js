@@ -299,10 +299,7 @@ const populationByCountry = [
     country: "French Polynesia",
     population: 277679,
   },
-  {
-    country: "French Southern territories",
-    population: 0,
-  },
+
   {
     country: "Gabon",
     population: 2119275,
