@@ -2,7 +2,7 @@ import React from "react";
 import "./StyleSheet/App.css";
 import HomePage from "./Components/HomePage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import TableView from "./Components/Dashboard/TableView";
+import DashboardController from "./Components/Main/Dashboard/DashboardController";
 
 const App = () => {
   return (
@@ -17,11 +17,11 @@ const App = () => {
         />
 
         <Route
-          path="/tableView/"
+          path="/dashboard/"
           exact
           strict
           render={() => {
-            return <TableView />;
+            return <DashboardController />;
           }}
         />
       </div>

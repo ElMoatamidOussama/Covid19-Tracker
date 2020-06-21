@@ -1,0 +1,169 @@
+/*------------------ Override Navbar Section----------------*/
+#dashboard #nav-bar {
+  background-image: none !important;
+  background-color: #343a40 !important;
+}
+/*------------------ Snackbar Loading Section----------------*/
+#snackBar .MuiAlert-standardError {
+  width: 100% !important;
+}
+#snackBar .MuiIconButton-root {
+  outline: none !important;
+}
+/*------------------ MainPanel Section----------------*/
+#mainPanel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#mainPanel div {
+  text-align: center;
+  margin: 10px;
+  padding: 2px 65px;
+}
+#mainPanel .numbers {
+  font-family: Montserrat, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+#mainPanel .labels {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+}
+#Active {
+  color: #2f4aa7;
+}
+#Deaths {
+  color: #dd1212;
+}
+#Recovered {
+  color: #0d8617;
+}
+/*------------------ Tabs Section----------------*/
+#tabs {
+  width: 95%;
+  margin: auto;
+}
+#tabsComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#tabsComponent .menu {
+  width: 22%;
+}
+@media screen and (max-width: 1200px) {
+  #tabsComponent .menu {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #tabsComponent .menu {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #tabsComponent .menu {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #tabsComponent .menu {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #tabsComponent .menu {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #tabsComponent .menu {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #tabsComponent .menu {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #tabsComponent .menu {
+    width: 60%;
+  }
+}
+/*------------------ Dashboard Section----------------*/
+#dashboard.stretch [class*="MuiTableCell-root"] {
+  padding: 0 60px 60px 0;
+}
+.MuiPaper-root {
+  width: 95%;
+  margin: 20px auto;
+}
+#dashboard .MuiBackdrop-root {
+  z-index: 150;
+}
+#dashboard .MuiCircularProgress-root {
+  color: #15206d !important;
+}
+/*------------------ Data Table Section----------------*/
+.MuiPaper-root th,
+.MuiPaper-root [class*=" MUIDataTableBodyCell-cellHide-"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+.MuiPaper-root td {
+  font-family: "Roboto Thin", sans-serif;
+  font-size: 0.9em;
+}
+.MuiPaper-root [class*="MUIDataTableToolbar-titleText-"] {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+.MuiPaper-elevation8 {
+  width: 5%;
+}
+.MuiPaper-root {
+  margin-top: 30px;
+  width: 94vw;
+}
+.MuiPaper-root [class*="MUIDataTableToolbar-actions-"] button {
+  outline: none !important;
+}
+.MuiPaper-root #pagination-next {
+  outline: none !important;
+}
+.MuiPaper-root #pagination-back {
+  outline: none !important;
+}
+.MuiPaper-root .MuiButtonBase-root {
+  outline: none !important;
+}
+/*------------------ Chart Section----------------*/
+#mixedChart {
+  width: 600px;
+  margin: auto auto 20px;
+}
+@media screen and (max-width: 600px) {
+  #mixedChart {
+    width: 100%;
+  }
+}
+#countryForm {
+  width: 44%;
+  margin: 20px auto 25px;
+}
+/*------------------ Map Section----------------*/
+#reactMapChart .Mine {
+  text-align: justify;
+}
+#reactMapChart .__react_component_tooltip h6 {
+  text-align: center;
+  font-size: 1.4em;
+  text-decoration-style: solid;
+}
+#reactMapChart {
+  margin: auto;
+}
+/*------------------ END ----------------*/

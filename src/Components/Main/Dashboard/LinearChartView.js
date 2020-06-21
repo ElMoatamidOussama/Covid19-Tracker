@@ -1,10 +1,10 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { Form, Row, Col } from "react-bootstrap";
-import CountriesISO2 from "../../Data/const/CountriesISO2";
+import CountriesISO2 from "../../../Data/const/CountriesISO2";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Alert } from "@material-ui/lab";
-const LinearChart = (props) => {
+const LinearChartView = (props) => {
   return (
     <div>
       <Snackbar
@@ -26,7 +26,11 @@ const LinearChart = (props) => {
           <Col sm="6">
             <Form.Control as={"select"} onChange={props.handleClick}>
               {CountriesISO2.map((element) => (
-                <option value={element.ISO2} key={element.ISO2}>
+                <option
+                  value={element.ISO2}
+                  key={element.ISO2}
+                  selected={element.ISO2 === props.selectedValue}
+                >
                   {element.Country}
                 </option>
               ))}
@@ -44,4 +48,4 @@ const LinearChart = (props) => {
   );
 };
 
-export default LinearChart;
+export default LinearChartView;

@@ -1,4 +1,4 @@
-const populationByCountry = [
+const PopulationByCountry = [
   {
     country: "Afghanistan",
     population: 37172386,
@@ -985,4 +985,4 @@ const populationByCountry = [
     population: 14439018,
   },
 ];
-export default populationByCountry;
+export default PopulationByCountry;

@@ -1082,7 +1082,7 @@ const CountriesISO2 = [
   {
     Country: "United States of America",
     Slug: "united-states",
-    ISO2: "US",
+    ISO2: "united-states",
   },
   {
     Country: "Uruguay",

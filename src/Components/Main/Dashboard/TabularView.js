@@ -1,7 +1,7 @@
 import MUIDataTable from "mui-datatables";
 import React from "react";
 
-const DataTable = (props) => {
+const TabularView = (props) => {
   const columns = [
     {
       name: "Country",
@@ -13,7 +13,7 @@ const DataTable = (props) => {
     },
     {
       name: "TotalConfirmed",
-      label: "Confirmed",
+      label: "Total Cases",
       options: {
         filter: false,
         sort: true,
@@ -21,7 +21,7 @@ const DataTable = (props) => {
     },
     {
       name: "NewConfirmed",
-      label: "New Confirmed",
+      label: "New Cases",
       options: {
         filter: false,
         sort: true,
@@ -89,7 +89,6 @@ const DataTable = (props) => {
   };
   return (
     <MUIDataTable
-      id="dataTable"
       title={
         "Countries Affected by Coronavirus\t [\t" + props.lastUpdateDate + "\t]"
       }
@@ -100,4 +99,4 @@ const DataTable = (props) => {
   );
 };
 
-export default DataTable;
+export default TabularView;

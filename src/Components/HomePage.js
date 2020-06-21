@@ -11,25 +11,26 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
   }
-  onClick = () => {
-    this.props.history.push("/tableView/");
-  };
   handleScroll = () => {
-    var navBarElement = document.querySelector("#nav-bar");
+    let navBarElement = document.querySelector("#nav-bar");
     if (navBarElement)
       navBarElement.classList.toggle("scrolled", window.scrollY > 120);
   };
+
+  onClick = () => {
+    this.props.history.push("/dashboard/");
+  };
+
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, true);
   }
   render() {
-    const src1 = "../images/table_view.svg";
-    const src3 = "../images/map_view.svg";
-    const src2 = "../images/chart_view.svg";
-    const src4 = "../images/documentation.svg";
-    const src5 = "../images/github.svg";
+    const src1 = "../images/table_view.svg",
+      src3 = "../images/map_view.svg",
+      src2 = "../images/chart_view.svg",
+      src4 = "../images/documentation.svg",
+      src5 = "../images/github.svg";
 
     return (
       <div>
@@ -78,7 +79,7 @@ class HomePage extends React.Component {
                 <Col md={3}>
                   <Image src={src1} className={"featuresImage"} />
                   <h3> Tabular View</h3>
-                  <p className={"homePageText"}>
+                  <p className={"featureDescription"}>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                     magna aliquam erat.
@@ -92,7 +93,7 @@ class HomePage extends React.Component {
                     id={"featuresSecondImage"}
                   />
                   <h3> Chart View</h3>
-                  <p className={"homePageText"}>
+                  <p className={"featureDescription"}>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                     magna aliquam erat.
@@ -106,8 +107,7 @@ class HomePage extends React.Component {
                     id={"featuresThirdImage"}
                   />
                   <h3> Map View</h3>
-
-                  <p className={"homePageText"}>
+                  <p className={"featureDescription"}>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                     magna aliquam erat.
@@ -122,9 +122,9 @@ class HomePage extends React.Component {
               <h1> API </h1>
               <Row className={"justify-content-md-center"}>
                 <Col md={5}>
-                  <Image src={src4} className={"featuresImage"} fluid />
+                  <Image src={src4} fluid />
                 </Col>
-                <Col md={6} id={"documentationPostman"}>
+                <Col md={6} id={"apiDocumentationPostman"}>
                   <h2>Documentation Available on Postman</h2>
                   <p>
                     Documentation is available on Postman online where all
@@ -158,7 +158,7 @@ class HomePage extends React.Component {
                   </a>
                 </Col>
                 <Col md={6}>
-                  <Image src={src5} className={"featuresImage"} fluid />
+                  <Image src={src5} fluid />
                 </Col>
               </Row>
             </Container>

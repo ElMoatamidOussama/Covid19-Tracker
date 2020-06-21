@@ -4,7 +4,7 @@ import React from "react";
 const MainCategoriesData = (props) => {
   const mainCategoriesDataList = [
     {
-      categoryName: "Confirmed Cases",
+      categoryName: "Confirmed",
       data: props.TotalConfirmed,
       newData: props.NewConfirmed,
     },
@@ -26,16 +26,16 @@ const MainCategoriesData = (props) => {
   ];
 
   return (
-    <Paper elevation={3} className={"root"}>
+    <Paper elevation={3} id={"mainPanel"}>
       {mainCategoriesDataList.map((item, index) => (
         <div key={item.categoryName}>
           <p className={"numbers"} id={item.categoryName}>
-            {item.data ? new Intl.NumberFormat().format(item.data) : item.data}
+            {item.data ? item.data.toLocaleString() : item.data}
             <br />
             {index !== 0 && item.newData ? (
               <span>
                 +(
-                {item.newData.toLocaleString("en-US")})
+                {item.newData.toLocaleString()})
               </span>
             ) : (
               <span>

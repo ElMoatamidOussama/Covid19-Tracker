@@ -7,12 +7,12 @@
 /*------------------Banner Section----------------*/
 #banner {
   background-image: linear-gradient(
-          30deg,
-          rgb(101, 131, 215) 0%,
-          rgb(35, 79, 164) 34%,
-          rgba(42, 183, 175, 0.86) 80%
+    30deg,
+    rgb(101, 131, 215) 0%,
+    rgb(35, 79, 164) 34%,
+    rgba(42, 183, 175, 0.86) 80%
   ) !important;
-  padding: 7% !important;
+  padding: 10vh !important;
   color: #ffffff;
 }
 #banner .homePageTitle {
@@ -27,6 +27,7 @@
   border-radius: 30px;
   border: 2px solid white;
   padding: 8px 20px !important;
+  margin: 0;
 }
 #banner .homePageButton svg {
   font-size: 25px;
@@ -39,6 +40,17 @@
 #banner #google_analytics {
   margin-top: 40px;
 }
+@media screen and (max-height: 800px) {
+  #banner {
+    padding: 20vh !important;
+  }
+  #banner .homePageTitle {
+    font-size: 35px;
+  }
+  #banner .homePageButton {
+    margin-top: 7px;
+  }
+}
 /*------------------ Features Section----------------*/
 #features {
   margin-top: 30px;
@@ -47,10 +59,10 @@
 #features h1 {
   margin-bottom: 100px;
 }
-#features img{
+#features img {
   margin-bottom: 40px;
 }
-#features .homePageText {
+#features .featureDescription {
   margin-top: 30px;
   text-align: justify;
   margin-bottom: 60px;
@@ -85,15 +97,14 @@
 #api .container {
   margin-bottom: 40px;
 }
-#api #documentationPostman {
+#api #apiDocumentationPostman {
   margin: auto;
-  width: 50%;
 }
 /*------------------ Support Section----------------*/
 #support {
   text-align: center;
 }
-#support h1{
+#support h1 {
   margin-bottom: 40px;
 }
 #support p {
@@ -113,8 +124,7 @@
   margin-bottom: 40px;
 }
 #support #githubSupport {
-  margin: auto;
-  width: 50%;
+  margin: 20px auto;
 }
 /*------------------ Footer Section----------------*/
 #footer {
@@ -137,3 +147,4 @@
   font-size: 12px;
   margin: 10px 0 10px 0;
 }
+/*------------------END----------------*/

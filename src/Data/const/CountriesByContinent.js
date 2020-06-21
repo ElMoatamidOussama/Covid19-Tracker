@@ -1,4 +1,4 @@
-const countriesByContinent = [
+const CountriesByContinent = [
   {
     country: "Afghanistan",
     continent: "Asia",
@@ -976,4 +976,4 @@ const countriesByContinent = [
     continent: "Africa",
   },
 ];
-export default countriesByContinent;
+export default CountriesByContinent;
