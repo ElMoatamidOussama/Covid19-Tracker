@@ -3,6 +3,8 @@ import "./StyleSheet/App.css";
 import HomePage from "./Components/HomePage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import DashboardController from "./Components/Main/Dashboard/DashboardController";
+import AboutUs from "./Components/Secondary/AbousUs";
+import ContactUs from "./Components/Secondary/ContactUs";
 
 const App = () => {
   return (
@@ -22,6 +24,22 @@ const App = () => {
           strict
           render={() => {
             return <DashboardController />;
+          }}
+        />
+        <Route
+          path="/aboutUs/"
+          exact
+          strict
+          render={() => {
+            return <AboutUs />;
+          }}
+        />
+        <Route
+          path="/contactUs/"
+          exact
+          strict
+          render={() => {
+            return <ContactUs />;
           }}
         />
       </div>

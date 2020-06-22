@@ -131,12 +131,15 @@ class HomePage extends React.Component {
                     routes can be seen with relevant descriptions, requests and
                     responses.
                   </p>
-                  <Button
-                    id={"apiDocumentationButton"}
-                    size="large"
-                    onClick={this.onClick}
-                  >
-                    Check Documentation <Icon name="chevron circle right" />
+                  <Button id={"apiDocumentationButton"} size="large">
+                    <a
+                      href={
+                        "https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest"
+                      }
+                    >
+                      Check Documentation
+                    </a>
+                    <Icon name="chevron circle right" />
                   </Button>
                 </Col>
               </Row>

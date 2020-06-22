@@ -22,9 +22,9 @@ const navBar = () => (
     />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto float-right">
-        <Nav.Link href="#home">About Us</Nav.Link>
-        <Nav.Link href="#dashboard">Dashboard</Nav.Link>
-        <Nav.Link href="#contact">Contact</Nav.Link>
+        <Link to="/aboutUs/">About Us</Link>
+        <Link to="/dashboard/">Dashboard</Link>
+        <Link to="/contactUs/">Contact</Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

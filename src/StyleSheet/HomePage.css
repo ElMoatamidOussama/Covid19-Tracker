@@ -94,6 +94,9 @@
   margin-top: 20px;
   padding: 14px 15px !important;
 }
+#api #apiDocumentationButton a {
+  color: white;
+}
 #api .container {
   margin-bottom: 40px;
 }

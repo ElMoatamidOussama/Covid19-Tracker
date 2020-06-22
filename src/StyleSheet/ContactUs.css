@@ -1,0 +1,58 @@
+/*------------------ Override Navbar Section----------------*/
+#contactRoot #nav-bar {
+  background-image: none !important;
+  background-color: #343a40 !important;
+}
+/*------------------ Contact Us Section----------------*/
+#contactSection #mainDivider {
+  width: 80%;
+  margin: auto;
+}
+#contactSection h1 {
+  margin: 20px auto;
+  font-size: 2.8em;
+  text-align: center;
+}
+#contactSection h3 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#contactContainer {
+  margin: 35px auto 51px;
+}
+#contactForm .form-label {
+  font-size: 1.3em;
+}
+#contactForm input {
+  border-radius: 0;
+}
+#contactForm textarea {
+  border-radius: 0;
+}
+#contactForm #submitButton {
+  margin-top: 10px;
+  border-radius: 0;
+  width: 100px;
+  font-size: 1.3em;
+  background-color: #0a69d0;
+}
+#contactInfoSection .contactInfoDiv {
+  width: 100%;
+  margin: 40px auto;
+}
+#contactInfoSection .contactInfoDiv .infoText {
+  margin: 30px;
+  font-size: 1.2em;
+}
+#contactInfoSection #phoneIcon {
+  transform: rotate(100deg);
+}
+#contactInfoSection #socialMediaDiv {
+  width: 55%;
+  margin: 15px auto;
+}
+#contactInfoSection #socialMediaDiv i {
+  margin: auto 20px;
+  font-size: 33px;
+  color: #0557b0;
+}
