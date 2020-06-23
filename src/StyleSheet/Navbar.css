@@ -1,4 +1,9 @@
 /*------------------NavBar Section----------------*/
+
+p {
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+}
 #nav-bar {
   background: rgba(0, 0, 0, 1);
   background-image: linear-gradient(
@@ -20,6 +25,7 @@
   margin-right: 5px;
   padding: 10px 10px;
   text-align: right;
+  font-weight: bold;
 }
 #responsiveToggle {
   outline: 0 !important;
@@ -28,7 +34,8 @@
 #responsiveToggle i {
   color: white;
 }
-#logo {
+#nav-bar #logo {
   height: 37px;
   padding-left: 20px;
+  font-family: Roboto, sans-serif !important;
 }

@@ -1,5 +1,48 @@
 /*------------------ Override Navbar Section----------------*/
-#myMain #nav-bar {
-    background-image: none !important;
-    background-color: #343a40 !important;
+#abtoutRoot #nav-bar {
+  background-image: none !important;
+  background-color: #343a40 !important;
+}
+
+/*------------------ Contact Us Section----------------*/
+#aboutSection #mainDivider {
+  width: 80%;
+  margin: auto;
+}
+#aboutContainer {
+  margin: 30px auto 37.5px;
+}
+#aboutSection h1 {
+  margin: 21px auto;
+  font-size: 2.6em;
+  text-align: center;
+}
+#aboutSection h3 {
+  font-size: 1.9em;
+  text-align: center;
+}
+#aboutSection p {
+  text-align: center;
+  font-size: 1.1em;
+}
+#aboutSection .aboutDiv {
+  padding: 19px;
+}
+#aboutSection #firstDiv {
+  margin-bottom: 7px;
+}
+#aboutSection #mernStackLogo {
+  margin-top: 10px;
+  width: 40%;
+}
+#aboutSection #pythonLogo {
+  width: 45%;
+}
+#aboutIllustration {
+  margin: auto;
+}
+#footer{
+  position: relative;
+  clear: both;
+  background-color: #000000;
 }

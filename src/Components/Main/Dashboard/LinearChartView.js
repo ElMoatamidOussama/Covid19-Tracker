@@ -24,12 +24,11 @@ const LinearChartView = (props) => {
             Choose Your Country:
           </Form.Label>
           <Col sm="6">
-            <Form.Control as={"select"} onChange={props.handleClick}>
+            <Form.Control as={"select"} onChange={props.handleClick}  defaultValue={props.selectedValue}>
               {CountriesISO2.map((element) => (
                 <option
                   value={element.ISO2}
                   key={element.ISO2}
-                  selected={element.ISO2 === props.selectedValue}
                 >
                   {element.Country}
                 </option>

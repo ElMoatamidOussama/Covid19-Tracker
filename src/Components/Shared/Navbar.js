@@ -10,7 +10,7 @@ const navBar = () => (
       <Link to="/">
         <Image
           id="logo"
-          src={"../images/covidLogo.svg"}
+          src={"../images/covidLogo2.svg"}
           alt={"covid-19 DashBoard"}
         />
       </Link>

@@ -14,13 +14,13 @@ const geoUrl =
 
 const MapView = ({ setTooltipContent, data }) => {
   const myList = data.map((item) => {
-    return item ? (item.TotalConfirmed / item.Population).toFixed(6) : 0;
+    return item && item.TotalConfirmed && item.Population? (item.TotalConfirmed / item.Population).toFixed(6) : 0;
   });
   const EumerableList = Enumerable.from(myList);
   const MinElement = EumerableList.min();
   const MaxElement = EumerableList.max();
   const colorScale = scaleLinear()
-    .domain([MinElement * 10, MaxElement])
+    .domain([MinElement , MaxElement])
     .range(["#6f93d4", "#265cae"]);
   return (
     <>

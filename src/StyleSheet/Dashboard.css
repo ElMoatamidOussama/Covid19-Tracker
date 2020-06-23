@@ -22,13 +22,14 @@
   padding: 2px 65px;
 }
 #mainPanel .numbers {
-  font-family: Montserrat, sans-serif;
+  font-family: "Roboto Light" , sans-serif !important;
   font-size: 25px;
   font-weight: bold;
 }
 #mainPanel .labels {
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif ;
   font-size: 20px;
+  font-weight: bold;
 }
 #Active {
   color: #2f4aa7;
@@ -99,6 +100,7 @@
 .MuiPaper-root {
   width: 95%;
   margin: 20px auto;
+  font-weight: bold;
 }
 #dashboard .MuiBackdrop-root {
   z-index: 150;
@@ -111,7 +113,7 @@
 .MuiPaper-root [class*=" MUIDataTableBodyCell-cellHide-"] {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 .MuiPaper-root td {
   font-family: "Roboto Thin", sans-serif;
@@ -120,6 +122,7 @@
 .MuiPaper-root [class*="MUIDataTableToolbar-titleText-"] {
   font-size: 1.5em;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 .MuiPaper-elevation8 {
   width: 5%;

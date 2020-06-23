@@ -3,22 +3,30 @@
   width: 700px;
   margin: 0 auto 20px;
 }
-
 /*------------------Banner Section----------------*/
 #banner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   background-image: linear-gradient(
-    30deg,
-    rgb(101, 131, 215) 0%,
-    rgb(35, 79, 164) 34%,
-    rgba(42, 183, 175, 0.86) 80%
+          30deg,
+          rgb(101, 131, 215) 0%,
+          rgb(35, 79, 164) 34%,
+          rgba(42, 183, 175, 0.86) 80%
   ) !important;
-  padding: 10vh !important;
   color: #ffffff;
 }
 #banner .homePageTitle {
-  font-size: 38px;
+  font-size: 30px !important;
   font-weight: 600;
-  margin-top: 100px;
+  margin-top: 40px;
+  width: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #banner .homePageButton {
   font-size: 18px;
@@ -34,11 +42,12 @@
   margin-left: 10px;
 }
 #banner .homePageText {
+  width: 450px;
   margin-bottom: 40px;
+  font-size: 15px;
   text-align: justify;
 }
 #banner #google_analytics {
-  margin-top: 40px;
 }
 @media screen and (max-height: 800px) {
   #banner {
@@ -66,6 +75,7 @@
   margin-top: 30px;
   text-align: justify;
   margin-bottom: 60px;
+  font-size:14px;
 }
 #features .featuresImage {
   width: 250px;
@@ -89,7 +99,7 @@
 #api #apiDocumentationButton {
   font-size: 15px;
   color: white;
-  background-color: #23509b;
+  background-color: #2a64c1;
   border-radius: 30px;
   margin-top: 20px;
   padding: 14px 15px !important;

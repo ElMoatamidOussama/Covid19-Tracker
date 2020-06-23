@@ -37,38 +37,36 @@ class HomePage extends React.Component {
         <section id={"main"}>
           <Navbar />
           <section id={"banner"}>
-            <Container>
-              <Row className={"justify-content-md-center"}>
-                <Col md={5}>
-                  <p className={"homePageTitle"}>COVID-19 DASHBOARD</p>
-                  <p className={"homePageText"}>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in.
-                  </p>
-                  <Button
-                    className="homePageButton"
-                    size="large"
-                    onClick={this.onClick}
-                  >
-                    Get Started
-                    <PlayCircleOutlineIcon fontSize={"large"} />
-                  </Button>
-                </Col>
-                <Col md={1} />
-                <Col md={6}>
-                  <Image
-                    id="google_analytics"
-                    src={"../images/all_the_data.svg"}
-                    alt={"google_analytics"}
-                    fluid
-                  />
-                </Col>
-              </Row>
-            </Container>
+            <Row className={"justify-content-md-center"}>
+              <Col md={6}>
+                <p className={"homePageTitle"}>
+                  A free tracker to keep you informed of the global Coronavirus
+                  statistics.
+                </p>
+                <p className={"homePageText"}>
+                  Access data on Covid-19 through a powerful tabular dashboard
+                  with several options, a graphical view to help you analyse
+                  data and finally a colorful map according to the intensity of
+                  the virus.
+                </p>
+                <Button
+                  className="homePageButton"
+                  size="large"
+                  onClick={this.onClick}
+                >
+                  Get Started
+                  <PlayCircleOutlineIcon fontSize={"large"} />
+                </Button>
+              </Col>
+              <Col md={6}>
+                <Image
+                  id="google_analytics"
+                  src={"../images/all_the_data.svg"}
+                  alt={"google_analytics"}
+                  fluid
+                />
+              </Col>
+            </Row>
           </section>
           <Divider />
           <Divider />
@@ -80,9 +78,9 @@ class HomePage extends React.Component {
                   <Image src={src1} className={"featuresImage"} />
                   <h3> Tabular View</h3>
                   <p className={"featureDescription"}>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat.
+                    Powerful table displaying updated data and allowing you to
+                    customize its column view, filter it by country and finally
+                    to download it in a csv format.
                   </p>
                 </Col>
                 <Col md={1} />
@@ -94,9 +92,8 @@ class HomePage extends React.Component {
                   />
                   <h3> Chart View</h3>
                   <p className={"featureDescription"}>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat.
+                    Line graph showing the evolution of the virus through time
+                    based on three indicators: confirmed, deaths and recovered.
                   </p>
                 </Col>
                 <Col md={1} />
@@ -108,9 +105,9 @@ class HomePage extends React.Component {
                   />
                   <h3> Map View</h3>
                   <p className={"featureDescription"}>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat.
+                    Interactive Colored map according to the intensity of the
+                    Covid-19 allowing you to hover on countries to obtain their
+                    current state regarding the virus.
                   </p>
                 </Col>
               </Row>

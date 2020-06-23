@@ -1,8 +1,19 @@
 /*------------------ Footer Section----------------*/
 #footer {
+  margin-top: 50px;
+  padding-top: 20px;
   background-color: #343a40 !important;
   color: #ffffff;
   text-align: center;
+}
+#footer .title {
+  font-size: 1.6em;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+#footer p {
+  font-size: 1.1em;
+  text-align: justify;
 }
 #footer i {
   color: #ffffff;
@@ -14,8 +25,26 @@
   text-decoration: underline;
 }
 #footer [class*="col-md-"] {
-  padding-top: 3px;
-  padding-left: 30px;
-  font-size: 11px;
-  margin: 10px 0 10px 0;
+  font-size: 10px;
+}
+#footer .MuiDivider-root {
+  background-color: #ffffff;
+  margin: 10px 0 5px 0;
+}
+#footer #phoneIcon {
+  transform: rotate(100deg);
+}
+#footer #mailSpan {
+  margin-top: 20px;
+}
+#footer .footerContact {
+  margin-top: 18px !important;
+}
+#footer .footerContact i {
+  margin-right: 10px !important;
+}
+
+#footer #mailIcon,
+#phoneIcon {
+  margin-right: 10px;
 }
